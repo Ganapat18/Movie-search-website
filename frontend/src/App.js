@@ -6,7 +6,7 @@ function App() {
   const [movies, setMovies] = useState([]);
 
   const searchMovie = async () => {
-    const res = await fetch(`http://localhost:5000/movies/${movie}`);
+    const res = await fetch(`https://movie-search-website-juap.onrender.com/movies/${movie}`);
     const data = await res.json();
     setMovies(data.Search || []);
   };

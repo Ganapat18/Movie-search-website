@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const axios = require("axios");
+const PORT = process.env.PORT || 5000;
 
 const app = express();
 app.use(cors());
@@ -12,7 +13,7 @@ app.get("/movies/:name", async (req, res) => {
 
   try {
     const response = await axios.get(
-      `https://www.omdbapi.com/?s=${movieName}&apikey=${API_KEY}`
+      `http://www.omdbapi.com/?i=tt3896198&apikey=184b690f`
     );
     res.json(response.data);
   } catch (error) {
@@ -20,6 +21,6 @@ app.get("/movies/:name", async (req, res) => {
   }
 });
 
-app.listen(5000, () => {
-  console.log("Server running on port 5000");
+app.listen(PORT, () => {
+  console.log("Server running ");
 });

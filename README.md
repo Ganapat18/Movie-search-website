@@ -1,3 +1,5 @@
+Live Preview link : https://moviesearchtogether.netlify.app/
+
 🎬 Movie Search Website
 
 A full-stack Movie Search Website built using React for the frontend and Express.js for the backend.
